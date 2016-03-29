@@ -10,12 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Blade::setContentTags('<%', '%>');				// for variables and all things Blade
-Blade::setEscapedContentTags('<%%', '%%>');		// for escaped data
+// Blade::setContentTags('<%', '%>');				// for variables and all things Blade
+// Blade::setEscapedContentTags('<%%', '%%>');		// for escaped data
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'PageController@index');
+Route::get('/home', 'PageController@index');
+Route::get('/about', 'PageController@about');
+// Route::get('/admin', 'AdminController@index');
+Route::resource('ajax/page', 'PageAdminController');
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,10 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/admin', 'AdminController@index');
 });

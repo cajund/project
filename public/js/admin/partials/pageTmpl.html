@@ -1,0 +1,30 @@
+
+<div class="content">
+    <div class="title">Admin</div>
+    <div class="wrapper">
+        <div>
+            <label>Headline</label>
+            <input type="text" ng-model="current_page.headline">
+        </div>
+        <div>
+            <label>Page Label</label>
+            <input type="text" ng-model="current_page.page_label">
+        </div>
+        <div>
+            <label>Body</label>
+            <textarea ng-model="current_page.body"></textarea>
+        </div>
+        <div>
+            <button ng-click="clearPage()">New</button>
+            <button ng-click="savePage()">Save</button>
+        </div>
+    </div>
+</div>
+<div class="list_wrapper">
+    <div class="title">Pages</div>
+    <div class="list" ng-repeat="page in page_list">
+        <div class="item">
+            <a class="link" ng-click="getPage(page.id)">{{ page.page_label }}</a>
+        </div>
+    </div>
+</div>
