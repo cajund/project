@@ -34,6 +34,13 @@
                 text-decoration: underline;
                 cursor: pointer;
             }
+            .image {
+                float: left;
+            }
+            .image img {
+                height: 150px;
+            }
+
             label {
                 display: block;
                 float: left;
@@ -68,5 +75,8 @@
         <script src="{{ URL::asset('js/admin/app.js') }}"></script>
         <script src="{{ URL::asset('js/admin/services/PageService.js') }}"></script>
         <script src="{{ URL::asset('js/admin/controllers/PageController.js') }}"></script>
+        <script src="{{ URL::asset('js/admin/services/GalleryService.js') }}"></script>
+        <script src="{{ URL::asset('js/admin/services/ImageService.js') }}"></script>
+        <script src="{{ URL::asset('js/admin/controllers/GalleryController.js') }}"></script>
 
 @endsection

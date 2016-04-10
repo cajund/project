@@ -22,8 +22,8 @@
 </div>
 <div class="list_wrapper">
     <div class="title">Pages</div>
-    <div class="list" ng-repeat="page in page_list">
-        <div class="item">
+    <div class="list">
+        <div class="item" ng-repeat="page in page_list">
             <a class="link" ng-click="getPage(page.id)">{{ page.page_label }}</a>
         </div>
     </div>

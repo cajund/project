@@ -6,6 +6,10 @@ app.config(['$routeProvider',function($routeProvider) {
 			controller: 'PageController',
 			templateUrl: '/js/admin/partials/pageTmpl.html'
 		})
+		.when('/galleries/:id?', {
+			controller: 'GalleryController',
+			templateUrl: '/js/admin/partials/galleryTmpl.html'
+		})
 		.otherwise({ redirectTo: '/pages' });
 
 }]);

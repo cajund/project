@@ -1,0 +1,46 @@
+
+<div class="content">
+    <div class="title">Admin</div>
+    <div class="wrapper">
+        <div>
+            <label>Gallery Name</label>
+            <input type="text" ng-model="current_gallery.name">
+        </div>
+        <div style="clear: both;">
+            <button ng-click="clearGallery()">New</button>
+            <button ng-click="saveGallery()">Save</button>
+        </div>
+        <div style="clear: both;">
+            <label>Images</label>
+             <div style="clear: both;"></div>
+            <div class="images">
+                <div class="image" ng-repeat="image in current_image_list">
+                    <img src="/galleries/{{ image.filename }}">
+                    <br>
+                    {{ image.name }} ({{ image.filename }})
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;">
+            <label>Add New</label>
+            <div class="images">
+                
+                <p ng-show="current_gallery.id"> 
+                    <input type = "file" file-model = "myFile"/>
+                    <button ng-click = "uploadImage()">Upload Image</button>
+                </p>
+
+                <p ng-hide="current_gallery.id">Select or Create a new Gallery</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="list_wrapper">
+    <div class="title">Galleries</div>
+    <div class="list">
+        <div class="item" ng-repeat="gallery in gallery_list">
+            <a class="link" ng-click="getGallery(gallery.id)">{{ gallery.name }}</a>
+        </div>
+    </div>
+</div>
