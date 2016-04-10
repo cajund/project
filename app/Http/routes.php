@@ -17,6 +17,8 @@
 Route::get('/', 'PageController@index');
 Route::get('/home', 'PageController@index');
 Route::get('/about', 'PageController@about');
+Route::get('/gallery/{id?}', 'GalleryController@index');
+Route::get('/contact', 'PageController@contact');
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +38,6 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/admin', 'AdminController@index');
 	Route::resource('ajax/page', 'PageAdminController');
+	Route::resource('ajax/gallery', 'GalleryAdminController');
+	Route::resource('ajax/image', 'ImageAdminController');
 });

@@ -48,6 +48,8 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/gallery') }}">Galleries</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -57,6 +59,9 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        <li><a href="{{ url('#/pages') }}">Pages</a></li>
+                        <li><a href="{{ url('#/galleries') }}">Galleries</a></li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
