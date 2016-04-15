@@ -19,6 +19,7 @@ Route::get('/home', 'PageController@index');
 Route::get('/about', 'PageController@about');
 Route::get('/gallery/{id?}', 'GalleryController@index');
 Route::get('/contact', 'PageController@contact');
+Route::post('/contact', 'PageController@save_contact_form');
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,5 @@ Route::group(['middleware' => 'web'], function () {
 	Route::resource('ajax/page', 'PageAdminController');
 	Route::resource('ajax/gallery', 'GalleryAdminController');
 	Route::resource('ajax/image', 'ImageAdminController');
+	Route::resource('ajax/submission', 'SubmissionAdminController');
 });

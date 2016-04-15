@@ -78,5 +78,7 @@
         <script src="{{ URL::asset('js/admin/services/GalleryService.js') }}"></script>
         <script src="{{ URL::asset('js/admin/services/ImageService.js') }}"></script>
         <script src="{{ URL::asset('js/admin/controllers/GalleryController.js') }}"></script>
+        <script src="{{ URL::asset('js/admin/services/SubmissionService.js') }}"></script>
+        <script src="{{ URL::asset('js/admin/controllers/SubmissionController.js') }}"></script>
 
 @endsection

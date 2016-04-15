@@ -10,6 +10,10 @@ app.config(['$routeProvider',function($routeProvider) {
 			controller: 'GalleryController',
 			templateUrl: '/js/admin/partials/galleryTmpl.html'
 		})
+		.when('/submissions/:id?', {
+			controller: 'SubmissionController',
+			templateUrl: '/js/admin/partials/SubmissionTmpl.html'
+		})
 		.otherwise({ redirectTo: '/pages' });
 
 }]);

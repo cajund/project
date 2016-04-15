@@ -79,7 +79,7 @@
                                 <table border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td align="left"  class="">
-                                            <textarea name="question" rows="4" cols="50"></textarea>
+                                            <textarea name="comment" rows="4" cols="50"></textarea>
                                         </td>
                                     </tr>
                                 </table>
